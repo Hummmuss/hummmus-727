@@ -11,12 +11,9 @@ int main()
 	}
 	else
 	{
-		cout << "блять" << endl;
 		r = c - b;
 		rr = c - a;
 		p = r + rr;
-		cout << r << endl;
-		cout << rr << endl;
 		cout << p << endl;
 	}
 }
