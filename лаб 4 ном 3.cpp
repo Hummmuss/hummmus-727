@@ -1,19 +1,18 @@
-#include <iostream>
-using namespace std;
+#include <iostream> // библиотека ввода и вывода
+using namespace std; // вводим пространство имен std
 int main()
 {
-	double a, b, c, r1, r2, p;
-	cin >> a >> c >> b;
-	if ((a > c) or (c > b))
+	double a, b, c, r1, r2, p; //ввод вещ переменных
+	cin >> a >> c >> b; //ввод переменных a, b, c с консоли
+	if ((a > c) or (c > b)) //условие, при котором если a < c < b, то выводит ошибку
 	{
-		cout << "error" << endl;
+		cout << "error" << endl; 
 	}
-	else 
+	else  
 	{
-		r1 = b - c;
-		r2 = c - a;
+		r1 = b - c; //вычисления
+		r2 = c - a; 
 		p = r1 * r2;
-		cout << p << endl;
+		cout << p << endl; //вывод результата
 	}
-	return 0;
 }
