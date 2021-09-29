@@ -3,10 +3,20 @@
 using namespace std;
 int main()
 {
-    double a, b, c, d, e, f; //вводим вещ переменные
-    cin >> a >> b >> c; //ввод с консоли
-    d = c - a; //расст. между а и с
-    e = c - b; //расст. между b и с
-    f = d + e; // сумма расстояний
-    cout << f << endl; //вывод результата
+	double a, b, c, r, rr, p;
+	cin >> a >> b >> c;
+	if ((a > b) or (b > c))
+	{
+		cout << "error" << endl;
+	}
+	else
+	{
+		cout << "блять" << endl;
+		r = c - b;
+		rr = c - a;
+		p = r + rr;
+		cout << r << endl;
+		cout << rr << endl;
+		cout << p << endl;
+	}
 }
