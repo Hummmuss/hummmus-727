@@ -3,6 +3,7 @@ using namespace std; // вводим пространство имен std
 int main()
 {
 	double a, b, c, r1, r2, p; //ввод вещ переменных
+	cout << "vvedite znacheniya peremennyh a, b i c" << endl;
 	cin >> a >> c >> b; //ввод переменных a, b, c с консоли
 	if ((a > c) or (c > b)) //условие, при котором если a < c < b, то выводит ошибку
 	{
