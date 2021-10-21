@@ -1,3 +1,5 @@
+//Даны три точки A, B, C на числовой оси. Найти длины отрезков AC и BC и их сумму.
+
 #include <iostream>
 #include <cmath>
 using namespace std;
@@ -12,9 +14,9 @@ int main()
 	}
 	else
 	{
-		r = c - b;
-		rr = c - a;
-		p = r + rr;
+		r = c - b; //расстояние между с и б
+		rr = c - a; //расстояние между с и а
+		p = r + rr; //сумма расстояний
 		cout << p << endl;
 	}
 }
