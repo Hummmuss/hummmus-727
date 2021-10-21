@@ -1,3 +1,5 @@
+//Найти значение функции y = 3x6 − 6x2 − 7 при данном значении x
+
 #include <iostream>
 using namespace std;
 #include <cmath>
