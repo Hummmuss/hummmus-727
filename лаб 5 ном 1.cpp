@@ -1,3 +1,4 @@
+//Найти расстояние между двумя точками с заданными координатами (x1, y1) и (x2, y2)
 #include <iostream>
 #include <cmath>
 using namespace std;
