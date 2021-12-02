@@ -1,0 +1,383 @@
+
+
+
+///8 ЛАБА///////////////////////////////////////////////////////////////////////////////////////
+
+
+/*
+//1 Дан размер файла в байтах. Найти количество полных килобайтов, которые занимает данный файл
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    float a;
+    cout << "vvedite a" << endl;
+    cin >> a;
+    a = a / 1024;
+    cout << ceil(a) << endl;
+}
+/*
+
+
+/*
+//2 Даны целые положительные числа A и B (A > B). На отрезке длины A размещено максимально возможное
+//количество отрезков длины B (без наложений). Найти количество отрезков B, размещенных на отрезке A.
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    float a, b;
+    int s;
+    cout << "vvedite a i b" << endl;
+    cin >> a >> b;
+    if (b >= a)
+    {
+        cout << "error" << endl;
+    }
+    s = a / b;
+    cout << s << endl;
+}
+*/
+
+
+/*
+//3 Даны целые положительные числа A и B (A > B).
+//На отрезке длины A размещено максимально возможное количество отрезков длины B (без наложений). Найти длину незанятой части отрезка A.
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    float A, B, d;
+    cout << "vvedite A i B" << endl;
+    cin >> A >> B;
+    if (B > A)
+    {
+        cout << "B ne mojet byt bolshe A" << endl;
+    }
+    int c = A / B;
+    d = A - (c*B);
+    cout << d << endl;
+
+}
+*/
+
+
+/*
+//4 Дано двузначное число. Вывести число, полученное при перестановке цифр исходного числа.
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a, des, ed, b;
+    cout << "vvedite dvusnachnoye chislo" << endl;
+    cin >> a;
+    if ((a < 10) or (a>100))
+    {
+        cout << "chislo doljno byt dvusnachnym" << endl;
+    }
+    des = a/10;
+    ed = a%10;
+    b = des+(ed*10);
+    cout << b << endl;
+}
+*/
+
+
+/*
+//5 Дано трехзначное число. В нем зачеркнули первую слева цифру и приписали ее справа. Вывести полученное число.
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a, sot, des, ed, r;
+    cout << "vvedite trehznachnoye chislo" << endl;
+    cin >> a;
+    if ((a<100) or (a>999))
+    {
+        cout << "chislo doljno byt trehznachnym" << endl;
+    }
+    ed = a%10;
+    r = a/10;
+    des = r%10;
+    sot = a/100;
+    cout << des << ed << sot << endl;
+}
+*/
+
+
+
+//////////99999999//////////
+
+
+
+
+
+/*
+//1. С начала суток прошло N секунд(N — целое). Найти количество секунд, прошедших с начала последней минуты.
+#include <iostream>
+using namespace std;
+int main() {
+    int s, min, sec;
+    cout << "vvedite kol-vo sekund" << endl;
+    cin >> s;
+    min = s / 60;
+    sec = s - min * 60;
+    cout << sec << endl;
+
+}
+*/
+
+
+/*
+//2. Дни недели пронумерованы следующим образом: 0 — воскресенье, 1 — понедельник, 2 — вторник, . . . , 6 — суббота.
+//Дано целое число K, лежащее в диапазоне 1–365. Определить номер дня недели для K-го дня года, если известно,
+//что в этом году 1 января было понедельником.
+#include <iostream>
+using namespace std;
+int main() {
+    int n, ned, dn;
+    cout << "vvedite kol-vo dnej" << endl;
+    cin >> n;
+    ned = n / 7;
+    dn = n - ned * 7;
+    cout << dn << endl;
+
+}
+*/
+
+
+/*
+//3. Дни недели пронумерованы. Дано целое число K, лежащее в диапазоне 1–365,
+//и целое число N, лежащее в диапазоне 1–7.Определить номер дня недели для K - го
+//дня года, если известно, что в этом году 1 января было днем недели с номером N.
+#include <iostream>
+using namespace std;
+int main() {
+    int K, N, n, dn;
+    cout << "vvedite K (den goda)" << endl;
+    cin >> K;
+    cout << "vvedite N (den nedeli 1 janvarya)" << endl;
+    cin >> N;
+    n = K / 7;
+    dn = K - (n * 7) + (N-1);
+    cout << dn << endl;
+}
+*/
+
+/*
+//  4. Даны целые положительные числа A, B, C. На прямоугольнике
+//  размера A × B размещено максимально возможное количество квадратов со
+//  стороной C(без наложений). Найти количество квадратов, размещенных на прямоугольнике,
+//  а также площадь незанятой части прямоугольника.
+#include <iostream>
+using namespace std;
+int main() {
+    int A, B, C, mina, minb, k, S;
+    cout << "vvedite posledovatelno A, B, C" << endl;
+    cin >> A >> B >> C;
+    minb = B / C;
+    mina = A / C;
+    k = mina * minb;
+    S = A*B - k * pow(C, 2);
+    cout << "k = " << k << ", S = " << S << endl;
+}
+*/
+
+
+/*
+//5. Дан номер некоторого года (целое положительное число).
+//Определить соответствующий ему номер столетия, учитывая, что,
+//к примеру, началом 20 столетия был 1901 год
+
+#include <iostream>
+using namespace std;
+int main() {
+    int n, s;
+    cout << "vvedite nomer goda" << endl;
+    cin >> n;
+    s = n / 100 + 1;
+    cout << "nomer stoletiya - " << s << endl;
+
+}
+*/
+
+
+
+
+/////////////////////10 ЛАБА///////////////////////////////////
+
+
+/*
+//1. Даны два целых числа : A, B.Проверить истинность высказывания : «Справедливы неравенства A > 2 и B ≤ 3»
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    float A, B;
+    cout << "vvedite A, zatem vvedite B" << endl;
+    cin >> A >> B;
+    if ((A > 2) and (B <= 3))
+    {
+        cout << "true" << endl;
+    }
+    else
+    {
+        cout << "false" << endl;
+    }
+    return 0;
+}
+*/
+
+
+/*
+//Даны три целых числа: A, B, C. Проверить истинность высказывания: «Справедливо двойное неравенство A < B < C».
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    float A, B, C;
+    cout << "vvedite posledovatelno chisla A, B, C" << endl;
+    cin >> A >> B >> C;
+    if ((B > A) and (C > B))
+    {
+        cout << "true" << endl;
+    }
+    else
+    {
+        cout << "false" << endl;
+
+    }
+    return 0;
+}
+*/
+
+
+
+
+/*
+// 3. Дано целое положительное число. Проверить истинность высказывания: «Данное число является четным двузначным».
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a;
+    cout << "vvedite chislo" << endl;
+    cin >> a;
+    if ((10 <= a) and (a <= 100) and (a % 2 == 0))
+    {
+        cout << "true" << endl;
+    }
+    else
+    {
+        cout << "false" << endl;
+    }
+    return 0;
+}
+*/
+
+
+
+/*
+//Дано трехзначное число. Проверить истинность высказывания: 
+//«Цифры данного числа образуют возрастающую или убывающую последовательность».
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a, sot, des, ed;
+    cout << "vvedite trehznachnoe chislo" << endl;
+    cin >> a;
+    ed = a % 10;
+    sot = a / 100;
+    des = (a / 10) % 10;
+    if (((ed <= des) and (des <= sot)) or ((ed >= des) and (des >= sot)))
+    {
+        cout << "true" << endl;
+    }
+    else
+    {
+        cout << "false" << endl;
+    }
+    return 0;
+}
+*/
+
+
+/*
+//Дано четырехзначное число. Проверить истинность высказывания: 
+//«Данное число читается одинаково слева направо и справа налево».
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a, tis, sot, des, ed;
+    cout << "vvedite chetirehznachnoe chislo" << endl;
+    cin >> a;
+    tis = a / 1000;
+    sot = a / 100 % 10;
+    des = a / 10 % 10;
+    ed = a % 10;
+    if ((tis == ed) and (des == sot))
+    {
+        cout << "true" << endl;
+    }
+    else
+    {
+        cout << "false" << endl;
+    }
+    return 0;
+}
+*/
+
+
+/*
+//Даны целые числа a, b, c, являющиеся сторонами некоторого треугольника. 
+//Проверить истинность высказывания: «Треугольник со сторонами a, b, c является прямоугольным».
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a, b, c;
+    cout << "vvedite 3 storony treugolnika" << endl;
+    cin >> a >> b >> c;
+    if ((pow(a, 2) + pow(b, 2) == pow(c, 2)) or (pow(a, 2) + pow(c, 2) == pow(b, 2)) or (pow(c, 2) + pow(b, 2) == pow(a, 2)))
+    {
+        cout << "treugolnik abc pryamougolniy" << endl;
+    }
+    else
+    {
+        cout << "treugolnik abc ne pryamougolniy" << endl;
+    }
+    return 0;
+}
+*/
+
+
+//Даны целые числа a, b, c. Проверить истинность высказывания: «Существует треугольник со сторонами a, b, c».
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a, b, c;
+    cout << "vvedite posledovatelno tri storony treygolnika" << endl;
+    cin >> a >> b >> c;
+    if ((a + b <= c) or (a + c <= b) or (b + c <= a))
+    {
+        cout << "treugolnika ne sushestvuyet" << endl;
+    }
+    else
+    {
+        cout << "treugolnik sushestvuyet" << endl;
+    }
+    return 0;
+}
