@@ -1,0 +1,203 @@
+
+//1. Даны массивы A и B одинакового размера N. Поменять местами их содержимое и
+//вывести вначале элементы преобразованного массива A, а затем — элементы преобразованного массива B.
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+int main()
+{
+	int i, buf;
+	float arr[10] = {}, arr2[10] = {};
+	srand(time(NULL));
+	cout << "array #1 = ";
+	for (i = 0; i < 10; i++)
+	{
+		arr[i] = rand() % 20;
+		cout << arr[i] << ' ';
+	}
+	cout << endl << "array #2 = ";
+	for (i = 0; i < 10; i++)
+	{
+		arr2[i] = rand() % 20;
+		cout << arr2[i] << ' ';
+	}
+	cout << endl << "posle preobrazovaniy:" << endl;
+	for (i = 0; i < 10; i++)
+	{
+		buf = arr[i];
+		arr[i] = arr2[i];
+		arr2[i] = buf;
+	}
+	cout << "array #1 = ";
+	for (i = 0; i < 10; i++)
+	{
+		cout << arr[i] << ' ';
+	}
+	cout << endl << "array #2 = ";
+	for (i = 0; i < 10; i++)
+	{
+		cout << arr2[i] << ' ';
+	}
+}
+
+
+/*
+//2. Дан массив A размера N. Сформировать новый массив B того же размера по следующему правилу:
+//элемент BK равен среднему арифметическому элементов массива A с номерами от 1 до K.
+#include <iostream>
+using namespace std;
+int main()
+{
+	int i, k, sum;
+	float arra[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, arrb[10] = {}, srar;
+
+	cout << "array A = ";
+	for (i = 0; i < 10; i++)
+	{
+		cout << arra[i] << ' ';
+	}
+	cout << endl;
+	for (k = 0; k < 10; k++)
+	{
+		sum = arra[0];
+		for (i = 0; i < k; i++)
+		{
+			sum += arra[i+1];
+		}
+		cout << endl << sum;
+		arrb[k] = sum / (float(k) + 1);
+	}
+	cout << endl << "array B = ";
+	for (i = 0; i < 10; i++)
+	{
+		cout << arrb[i] << ' ';
+	}
+}
+*/
+
+
+/*
+//3. Дан целочисленный массив размера N.Увеличить все нечетные числа, содержащиеся в массиве,
+//на исходное значение последнего нечетного числа.Если нечетные числа в массиве отсутствуют, то оставить массив без изменений.
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+int main()
+{
+	int i, n, arr[10] = {};
+	srand(time(NULL));
+	cout << "array = ";
+	for (i = 0; i < 10; i++)
+	{
+		arr[i] = rand() % 20;
+		cout << arr[i] << ' ';
+	}
+	for (i = 0; i < 10; i++)
+	{
+		if (arr[i] % 2 != 0)
+		{
+			n = arr[i];
+		}
+	}
+	for (i = 0; i < 10; i++)
+	{
+		if (arr[i] % 2 != 0)
+		{
+			arr[i] += n;
+		}
+	}
+	cout << endl << "posle preobrazovaniy:";
+	for (i = 0; i < 10; i++)
+	{
+		cout << arr[i] << ' ';
+	}
+}
+*/
+/*
+//4. Дан массив размера N. 
+//Обнулить элементы массива, расположенные между его минимальным и максимальным элементами (не включая минимальный и максимальный элементы).
+#include <iostream>
+using namespace std;
+int main()
+{
+	int i, k, arr[10] = {4, 5, 2, 0, 6, 4, 8, 28, 3, 5}, imax, imin;
+	cout << "array = ";
+	for (i = 0; i < 10; i++)
+	{
+		cout << arr[i] << ' ';
+	}
+	int min = arr[0], max = arr[0];
+	for (i = 0; i < 10; i++)
+	{
+		if (arr[i] > max)
+		{
+			max = arr[i];
+			imax = i;
+		}
+		if (arr[i] < min)
+		{
+			min = arr[i];
+			imin = i;
+		}
+	}
+	if (imax > imin)
+	{
+		for (i = imin+1; i < imax; i++)
+		{
+			arr[i] = 0;
+		}
+	}
+	if (imax < imin)
+	{
+		for (i = imax + 1; i < imin; i++)
+		{
+			arr[i] = 0;
+		}
+	}
+	
+	cout << endl;
+	for (i = 0; i < 10; i++)
+	{
+		cout << arr[i] << ' ';
+	}
+
+}
+*/
+
+
+/*
+//5. Дан массив размера N, все элементы которого, кроме первого, упорядочены по возрастанию. 
+//Сделать массив упорядоченным, переместив первый элемент на новую позицию.
+#include <iostream>
+using namespace std;
+int main()
+{
+	int arr[] = { 5, 1, 2, 6, 6, 7, 9 }, i, j, buf;
+	cout << "array = ";
+	for (i = 0; i < 7; i++)
+	{
+		cout << arr[i] << " ";
+	}
+	for (i = 0; i < 6; i++)
+	{
+		for (j = 0; j < 6 - i; j++)
+		{
+			if (arr[j] > arr[j + 1])
+			{
+				buf = arr[j];
+				arr[j] = arr[j + 1];
+				arr[j + 1] = buf;
+			}
+		}
+	}
+	cout << endl;
+	for (i = 0; i < 7; i++)
+	{
+		cout << arr[i] << ' ';
+	}
+
+}
+*/
+
