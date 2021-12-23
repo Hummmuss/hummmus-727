@@ -1,0 +1,322 @@
+
+//1. Даны две переменные целого типа: A и B. Если их значения не равны, 
+//то присвоить каждой переменной большее из этих значений, а если равны, 
+//то присвоить переменным нулевые значения. Вывести новые значения переменных A и B.
+#include <iostream>
+using namespace std;
+int main()
+{
+	int A, B;
+	setlocale(LC_ALL, "rus");
+	cout << "введите А" << endl;
+	cin >> A;
+	cout << "введите В" << endl;
+	cin >> B;
+	if (A == B)
+	{
+		A = 0;
+		B = 0;
+	}
+	if (A > B)
+	{
+		B = A;
+	}
+	else
+	{
+		A = B;
+	}
+	cout << "A = " << A << endl;
+	cout << "B = " << B << endl;
+}
+
+
+
+/*
+//2. Даны три числа. Найти сумму двух наибольших из них
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "rus");
+	int a, b, c, s;
+	cout << "введите a" << endl;
+	cin >> a;
+	cout << "введите b" << endl;
+	cin >> b;
+	cout << "введите c" << endl;
+	cin >> c;
+	if ((a <= b) and (a <= c))
+	{
+		s = c + b;
+	}
+	if ((c <= a) and (c <= b))
+	{
+		s = a + b;
+	}
+	if ((b <= c) and (b <= a))
+	{
+		s = a + c;
+	}
+	cout << "summ = " << s << endl;
+}
+*/
+
+/*
+//3. На плоскости расположены три точки: A, B, C. 
+//Определить, какая из двух последних точек (B или C) расположена ближе к A, 
+//и вывести эту точку и ее расстояние от точки A.
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "rus");
+	int a, b, c, sb, sc, s;
+	cout << "введите a" << endl;
+	cin >> a;
+	cout << "введите b" << endl;
+	cin >> b;
+	cout << "введите c" << endl;
+	cin >> c;
+	sb = abs(a - b);
+	sc = abs(a - c);
+	if (sb < sc)
+	{
+		cout << "B; S = " << sb;
+	}
+	else
+	{
+		cout << "C; S = " << sc;
+	}
+}
+*/
+
+
+
+/*
+//4. Даны координаты точки, не лежащей на координатных осях OX и OY.
+//Определить номер координатной четверти, в которой находится данная точка.
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "rus");
+	int a, b;
+	cout << "введите x" << endl;
+	cin >> a;
+	cout << "введите y" << endl;
+	cin >> b;
+	if ((a > 0) and (b > 0))
+	{
+		cout << "1 четверть" << endl;
+	}
+	if ((a < 0) and (b > 0))
+	{
+		cout << "2 четверть" << endl;
+	}
+	if ((a < 0) and (b < 0))
+	{
+		cout << "3 четверть" << endl;
+	}
+	if ((a > 0) and (b < 0))
+	{
+		cout << "4 четверть" << endl;
+	}
+
+}
+*/
+
+
+
+/*
+//5. Дано целое число.Вывести его строку - 
+//описание вида «отрицательное четное число», «нулевое число», «положительное нечетное число» и т.д.
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "rus");
+	int a;
+	cout << "введите число" << endl;
+	cin >> a;
+	if ((a > 0) and (a % 2 == 0))
+	{
+		cout << "положительное четное число" << endl;
+	}
+	if ((a < 0) and (a % 2 == 0))
+	{
+		cout << "отрицательное четное число" << endl;
+	}
+	if ((a > 0) and (a % 2 != 0))
+	{
+		cout << "положительное нечетное число" << endl;
+	}
+	if ((a < 0) and (a % 2 != 0))
+	{
+		cout << "отрицательное нечетное число" << endl;
+	}
+	if (a == 0)
+	{
+		cout << "ноль" << endl;
+	}
+}
+*/
+
+
+/*
+//6. Дано целое число, лежащее в диапазоне 1–999.
+//Вывести его строку - описание вида «четное двузначное число», «нечетное трехзначное число» и т.д.
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "rus");
+	int a, d, k = 0;
+	cout << "введите число" << endl;
+	cin >> a;
+	d = a;
+	while (a != 0)
+	{
+		a = a / 10;
+		k++;
+	}
+	if (k == 3)
+	{
+		cout << "трехзначное ";
+	}
+	if (k == 2)
+	{
+		cout << "двузначное ";
+	}
+	if (k == 1)
+	{
+		cout << "однозначное ";
+	}
+	if (d % 2 == 0)
+	{
+		cout << "четное число";
+	}
+	if (d % 2 != 0)
+	{
+		cout << "нечетное число";
+	}
+
+}
+*/
+
+///////////////////////////////13//////////////////////////////////
+
+
+/*
+//1. Дано вещественное число — цена 1 кг конфет. Вывести стоимость 0.1, 0.2, . . . , 1 кг конфет.
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "rus");
+	int a;
+	float i;
+	cout << "введите стоимость 1 кг конфет" << endl;
+	cin >> a;
+	for (i = 0.1; i < 1.1; i = i + 0.1)
+	{
+		cout << i << " кг конфет будет стоить " << i * a << " руб" << endl;
+	}
+
+}
+*/
+
+
+/*
+//2. Дано целое число N(> 0). Найти произведение 1.1 · 1.2 · 1.3 · . . . (N сомножителей).
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "rus");
+	int n, i;
+	float a = 1, s = 1;
+	cout << "введите N" << endl;
+	cin >> n;
+	for (i = 0; i < n; i++)
+	{
+		a = a + 0.1;
+		s = s * a;
+	}
+	cout << s << endl;
+}
+*/
+
+
+/*
+//  3. Дано целое число N(> 0).Найти квадрат данного числа, используя для его вычисления следующую формулу:
+//  N2 = 1 + 3 + 5 + . . . + (2·N − 1).После добавления к сумме каждого слагаемого выводить текущее значение суммы
+
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	int n, N;
+	cout << "введите N " << endl;
+	cin >> N;
+	int s = 0;
+	for (int n = 1; n <= N; n++)
+	{
+		s += 2 * n - 1;
+		cout << s << " ";
+	}
+
+}
+*/
+
+
+/*
+//4. Дано вещественное число A и целое число N(> 0).Используя один цикл, найти сумму 1 + A + A2 + A3 + . . . + AN
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	float a, s = 1, ss = 0;
+	int n, i;
+	cout << "введите N " << endl;
+	cin >> n;
+	cout << "введите a " << endl;
+	cin >> a;
+	for (i = 0; i < n+1; i++)
+	{
+		s = pow(a, i);
+		ss = ss + s;
+		//cout << s << endl;
+	}
+	cout << ss;
+}
+*/
+
+/*
+//5. Дано вещественное число A и целое число N (> 0). Используя один цикл, найти значение выражения 
+// 1 − A + A2 − A3 + . ..± AN .
+// Условный оператор не использовать.
+#include <iostream>
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "Russian");
+	float a;
+	cout << "введите А" << endl;
+	cin >> a;
+	int n;
+	cout << "введите N" << endl;
+	cin >> n;
+	float a2 = 1, s = 1;
+	int i;
+
+	for (i = 2; i <= n+1; ++i)
+	{
+		a2 *= -a;
+		s += a2;
+	}
+	cout << s;
+}
+*/
